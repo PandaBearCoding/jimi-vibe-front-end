@@ -1,5 +1,7 @@
 import React from 'react';
 import UserCard from '../Components/UserCard.js';
+import SignUpCard from '../Components/SignUpCard.js';
+
 
 class UserContainer extends React.Component {
 
@@ -78,6 +80,7 @@ class UserContainer extends React.Component {
         return(
             <div>
                 User Container
+                <SignUpCard newUserSubmitHandler={this.newUserSubmitHandler} />
                 {this.renderUsers()}
             </div>
         )
