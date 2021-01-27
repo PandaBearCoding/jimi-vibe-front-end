@@ -65,7 +65,6 @@ class UserCard extends React.Component {
                 <p>Credit Card Number: <span>{cc_number}</span></p>
                 <p>Credit Card Date: <span>{cc_date}</span></p>
                 <p>Credit Card CVV: <span>{cc_cvv}</span></p>
-
                 <button onClick={this.updateClickHandler}>Edit Profile</button>
                 <button onClick={this.localDeleteHandler}>Delete Profile</button>
             </div>
