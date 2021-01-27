@@ -6,6 +6,11 @@ import FavoriteContainer from './Containers/FavoriteContainer.js';
 import CartContainer from './Containers/CartContainer.js';
 
 class App extends React.Component {
+
+  state={
+    user: {}
+  }
+
   render(){
     return(
       <div>

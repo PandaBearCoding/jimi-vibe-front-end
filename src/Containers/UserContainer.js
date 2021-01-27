@@ -17,7 +17,7 @@ class UserContainer extends React.Component {
     }
 
     newUserSubmitHandler = (newUser) => {
-        fetch('http://localhost:4000/users', {
+        fetch("http://localhost:4000/users", {
             method: "POST", 
             headers: {
                 "content-type": "application/json",
@@ -30,7 +30,7 @@ class UserContainer extends React.Component {
           .catch(console.log)
         }
 
-    updateSubmitHandler = (id, username, password, name, profile_picture, email, phone_number, address, cc_number, cc_cvv, cc_date) => {
+    updateUserSubmitHandler = (id, username, password, name, profile_picture, email, phone_number, address, cc_number, cc_cvv, cc_date) => {
         let updateUser = { 
             username: username,
             password: password,
@@ -61,7 +61,7 @@ class UserContainer extends React.Component {
         .catch(console.log)
     }
 
-    deleteHandler = (userId) => {
+    userDeleteHandler = (userId) => {
         fetch(`http://localhost:4000/users/${userId}`, {
              method: "DELETE"
         })
@@ -73,7 +73,7 @@ class UserContainer extends React.Component {
     }
 
     renderUsers = () => {
-        return this.state.userApi.map((el) => <UserCard key={el.id} user={el} updateHandler={this.updateSubmitHandler} deleteHandler={this.deleteHandler} />)
+        return this.state.userApi.map((el) => <UserCard key={el.id} user={el} updateHandler={this.updateUserSubmitHandler} deleteHandler={this.userDeleteHandler} />)
     }
 
     render(){

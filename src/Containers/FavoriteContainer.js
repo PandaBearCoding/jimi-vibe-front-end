@@ -9,6 +9,7 @@ class FavoriteContainer extends React.Component {
 
     renderFavorites = () => {
         return this.state.favoriteApi.map((el) => <FavoriteCard key={el.id} favorite={el} />)
+
     }
 
     render(){
