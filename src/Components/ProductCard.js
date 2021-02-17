@@ -18,8 +18,9 @@ class ProductCard extends React.Component {
     }
 
     localUpdateHandler = (e) => {
+        console.log(this.props.product.id)
         e.preventDefault()
-        this.props.updateHandler(this.props.product.id, this.state.image, this.state.description, this.state.price)
+        this.props.updateHandler(this.state.id, this.state.image, this.state.description, this.state.price)
         this.setState(previousState => ({
             clicked: !previousState.clicked
         }))
@@ -30,6 +31,7 @@ class ProductCard extends React.Component {
     }
 
     render(){
+        console.log("PROPS", this.props.product)
         let { image, description, price } = this.props.product
         return(
             <div className="productCard">

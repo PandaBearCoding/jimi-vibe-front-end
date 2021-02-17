@@ -77,6 +77,7 @@ class UserContainer extends React.Component {
     }
 
     render(){
+        console.log("USER STATE", this.state.userApi)
         return(
             <div>
                 User Container

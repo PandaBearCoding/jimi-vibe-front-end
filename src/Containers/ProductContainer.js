@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductCard from '../Components/ProductCard.js';
+import CreateListingCard from '../Components/CreateListingCard.js';
 
 class ProductContainer extends React.Component {
 
@@ -53,6 +54,7 @@ class ProductContainer extends React.Component {
     }
 
     productDeleteHandler = (productId) => {
+        console.log("product id", productId)
         fetch(`http://localhost:4000/products/${productId}`, {
              method: "DELETE"
         })
@@ -68,9 +70,11 @@ class ProductContainer extends React.Component {
     }
 
     render(){
+        console.log("PROD STATE", this.state.productApi)
         return(
             <div>
                 Product Container
+                <CreateListingCard newProductSubmitHandler={this.newProductSubmitHandler} />
                 {this.renderProducts()}
             </div>
         )
